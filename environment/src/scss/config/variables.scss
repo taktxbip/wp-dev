@@ -1,0 +1,100 @@
+$text: #141A33;
+$accent: #CB4E44;
+$lines: #DADADA;
+
+$config: deep-map-merge(
+    (
+        'font': (
+            'family': ('Circular', 'system', sans-serif),
+            'size' : 16px,
+            'color' : (
+                'heading' : #141A33,
+                'paragraph' : #3C3F4F,
+                'secondary' : #B3B8D4
+            )
+        ),
+        'borders' : (
+            'radius-smaller': 3px,
+            'radius': 4px,
+            'radius-bigger': 6px
+        ),
+        'colors' : (
+            'primary': (
+                '400': #6680FF,
+                '300': #8599FF,
+                '200': #CAD3FF,
+                '100': #EDF1FF
+                
+            ),
+            'neutral': (
+                '400': #141A33,
+                '300': #B3B8D4,
+                '200': #CCD0E9,
+                '100': #F5F7FF
+            ),
+            'secondary': (
+                '400': #111B52,
+                '300': #1A255E,
+                '200': #293574,
+                '100': #A0A5C2
+            ),
+            'semantic': (
+                'red': #f35a5c,
+                'red-400': #F57779,
+                'red-100': #FFEBEB,
+                'green': #39CBA5,
+                'green-600': #3BAF91,
+                'yellow': #FFD25E,
+                'yellow-100': #FFF4D7,
+                'olive': #AECB39,
+                'advert': #24B8DE
+            ),
+            'products': (
+                'basic': #252F60,
+                'basicBright': #2F3A71,
+                'plus': #2E2049,
+                'plusBright': #3B2A5E,
+                'premium': #17274A,
+                'premiumBright': #1E315E,
+                'text': #636D9A
+            ),
+            'landing':(
+                'outline': #293574,
+            ),
+            'gradients':(
+                'purplePinkText': linear-gradient(84.48deg, #CCD0E9 0%, #CCD0E9 30%, #6680FF 42%, #F5C2E7 55%, #CCD0E9 70%, #CCD0E9 100%),
+                'purplePink': linear-gradient(84.48deg, #6680FF 32.07%, #F5C2E7 111.95%)
+            )
+        ),
+      'layout': (
+        'responsive': (
+          'desktop': 1188px,
+          'laptop': 960px,
+          'tablet': 768px,
+          'smallscreen': 576px,
+          'xscreen': 460px,
+          'xxscreen': 370px,
+        )
+      ),
+      'transition': .3s ease-in-out,
+      'transition-fast': .1s ease-in-out
+    ),
+    $config,
+    true
+);
+
+// .textShineBlack {
+//     background: linear-gradient(to right, #000 20%, #bada55 30%, #bada44 70%, #000 80%);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     text-fill-color: transparent;
+//     background-size: 200% auto;
+//     animation: textShine 7s ease-in-out infinite alternate;
+//   }
+  
+//   @keyframes textShine {
+//     to {
+//       background-position: 200%;
+//     }
+//   }

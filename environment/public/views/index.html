@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body class="home">
+    <%= _.template(require('./../includes/svg.html').default)() %>
+        <%= _.template(require('./../includes/header.html').default)() %>
+            <div id="main">
+
+                <h1>Content here</h1>
+
+            </div>
+            <!-- #wrapper -->
+            <%= _.template(require('./../includes/footer.html').default)() %>
+</body>
+
+</html>

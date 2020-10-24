@@ -1,0 +1,121 @@
+.comboTreeWrapper {
+    position: relative;
+    text-align: left !important;
+    .simplebar-track {
+        &.simplebar-horizontal {
+            display: none;
+        }
+        &.simplebar-vertical {
+            background: none;
+            right: 6px;
+            top: 6px;
+            bottom: 6px;
+        }
+    }
+}
+
+.comboTreeInputWrapper {
+    position: relative;
+}
+
+.comboTreeArrowBtn {
+    width: 14px;
+    height: 9px;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: get('transition');
+    svg {
+        position: absolute;
+    }
+}
+
+.comboTreeDropDownContainer {
+    display: none;
+    background: #fff;
+    border: 2px solid get('colors.neutral.200');
+    border-radius: get('borders.radius');
+    position: absolute;
+    box-sizing: content-box;
+    z-index: 999;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 8px;
+    left: 20px;
+    width: 100%;
+    @media all and (max-width: get('layout.responsive.smallscreen')) {
+        left: 0;
+        right: 0;
+        width: unset;
+    }
+    ul {
+        padding: 0px;
+        margin: 0;
+        li {
+            list-style-type: none;
+            padding: 0;
+            background-color: #fff;
+            transition: get('transition');
+            &.selected span {
+                color: get('colors.primary.400')
+            }
+            .selectable {
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+            }
+            .not-selectable {
+                cursor: not-allowed;
+            }
+            &:hover span {
+                color: get('colors.primary.200')
+            }
+        }
+    }
+}
+
+span.comboTreeItemTitle {
+    display: block;
+    padding: 15px 17px;
+    font: 500 normal rem(16px) / 1.3 get('font.family');
+    color: get('colors.neutral.300');
+    transition: get('transition');
+    label {
+        cursor: pointer;
+        width: 100%;
+        display: block;
+    }
+    .comboTreeItemTitle input {
+        position: relative;
+        top: 2px;
+        margin: 0px 4px 0px 0px;
+    }
+}
+
+.comboTreeParentPlus {
+    position: relative;
+    left: -12px;
+    top: 4px;
+    width: 4px;
+    float: left;
+    cursor: pointer;
+}
+
+.comboTreeInputBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 24px;
+    &:focus+.comboTreeArrowBtn {
+        transform: rotate(180deg);
+    }
+}
+
+.multiplesFilter {
+    display: none;
+    +ul li .comboTreeItemTitle {
+        color: get('font.color.heading');
+    }
+}

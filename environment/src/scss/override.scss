@@ -1,0 +1,189 @@
+.woocommerce-terms-and-conditions-wrapper,
+.required {
+    display: none;
+}
+
+.woocommerce-checkout {
+    #payment {
+        ul.payment_methods {
+            list-style: none;
+            .wc_payment_method {
+                margin-bottom: 10px;
+                &.payment_method_stripe {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+        background: none;
+        ul.payment_methods {
+            border: none;
+            padding: 0;
+        }
+    }
+    .woocommerce-checkout-review-order-table {
+        tfoot,
+        thead {
+            display: none;
+        }
+    }
+}
+
+.woocommerce-error {
+    display: none;
+}
+
+.woocommerce-additional-fields {
+    display: none;
+}
+
+label[for=payment_method_stripe] {
+    font: 500 normal rem(18px) / rem(23px) get('font.family');
+    margin-bottom: 10px;
+    display: block;
+}
+
+html {
+    .woocommerce-checkout {
+        #payment {
+            #place_order {
+                float: unset;
+            }
+            div.form-row {
+                padding: 0;
+            }
+        }
+        #payment div.payment_box {
+            background: none;
+            padding: 0;
+            &:before {
+                display: none;
+            }
+            .form-row {
+                padding: 0;
+                margin: 0;
+                position: relative;
+            }
+        }
+    }
+    .woocommerce-error {
+        background: none;
+        border: none;
+        padding: 0 0 0 20px;
+        &:before {
+            left: 0;
+            top: unset;
+        }
+        li {
+            color: get('colors.semantic.red');
+        }
+    }
+    .woocommerce-info {
+        padding: 0;
+        background-color: #fff;
+        border: none;
+        font: 400 normal rem(16px) / 1.3 get('font.family');
+        &:before {
+            display: none;
+        }
+    }
+    .woocommerce table.shop_table {
+        border: none;
+        tr {}
+        th,
+        td {
+            border: none;
+            border-bottom: 1px solid get('colors.neutral.100');
+        }
+        .product-name,
+        tfoot tr th:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+.woocommerce-SavedPaymentMethods-saveNew {
+    display: none !important;
+}
+
+.woocommerce-order-pay {
+    .woocommerce-info {
+        order: 1
+    }
+    #order_review {
+        order: 2;
+    }
+}
+
+label {
+    font-family: get('font.family') !important;
+}
+
+html .woocommerce-account .woocommerce-MyAccount-content {
+    float: unset;
+    width: unset;
+}
+
+.cart-subtotal {
+    display: none;
+}
+
+// CF7 
+.invalid .wpcf7-response-output,
+.screen-reader-response {
+    display: none !important;
+}
+
+.wpcf7-not-valid-tip {
+    font: 500 normal rem(14px) / rem(20px) get('font.family');
+    color: get('colors.semantic.red');
+    margin-top: -8px;
+    display: block;
+}
+
+#wc-stripe-cc-form {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+}
+
+.wc-saved-payment-methods {
+    list-style: none;
+    padding: 0;
+    li {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        label:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.woocommerce form {
+    .form-row-first {
+        width: 47%;
+        overflow: visible;
+        float: left;
+    }
+    .form-row-last {
+        width: 47%;
+        overflow: visible;
+        float: right;
+    }
+} 
+
+
+.stripe-card-brand {
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    right: 16px;
+    top: 35px;
+    &.stripe-mastercard-brand {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12' fill='none'%3E%3Cpath d='M12.9779 1.28223H7.02734V10.7145H12.9779V1.28223Z' fill='%23FF5F00'/%3E%3Cpath d='M7.63907 6.00133C7.63834 5.09309 7.85049 4.19658 8.25947 3.37966C8.66846 2.56274 9.26356 1.8468 9.99974 1.28604C9.08794 0.590608 7.99294 0.158163 6.83987 0.0381247C5.68681 -0.0819136 4.52221 0.115298 3.47917 0.607221C2.43613 1.09914 1.55674 1.86593 0.941502 2.81994C0.326264 3.77396 0 4.87671 0 6.00216C0 7.12762 0.326264 8.23037 0.941502 9.18438C1.55674 10.1384 2.43613 10.9052 3.47917 11.3971C4.52221 11.889 5.68681 12.0862 6.83987 11.9662C7.99294 11.8462 9.08794 11.4137 9.99974 10.7183C9.26333 10.1574 8.66809 9.44115 8.2591 8.62392C7.8501 7.80669 7.63808 6.90985 7.63907 6.00133Z' fill='%23EB001B'/%3E%3Cpath d='M20.0004 5.99978C20.0004 7.12532 19.674 8.22814 19.0587 9.18219C18.4433 10.1362 17.5638 10.903 16.5207 11.3949C15.4775 11.8867 14.3128 12.0838 13.1596 11.9636C12.0065 11.8434 10.9115 11.4107 9.99976 10.7151C10.7356 10.1538 11.3306 9.43768 11.7397 8.62071C12.1488 7.80374 12.3613 6.90728 12.3613 5.99895C12.3613 5.09062 12.1488 4.19415 11.7397 3.37719C11.3306 2.56022 10.7356 1.84409 9.99976 1.28282C10.9115 0.587178 12.0065 0.154523 13.1596 0.0343119C14.3128 -0.0858987 15.4775 0.111186 16.5207 0.603039C17.5638 1.09489 18.4433 1.86166 19.0587 2.81571C19.674 3.76976 20.0004 4.87258 20.0004 5.99812V5.99978Z' fill='%23F79E1B'/%3E%3C/svg%3E");
+    }
+} 
